@@ -12,6 +12,7 @@
         stage('Clean') {
             steps {
                 sh 'echo pwd'
+                echo 'ls'
             }
         }
     }

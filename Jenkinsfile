@@ -5,8 +5,8 @@
         stage('Build') {
             steps {
                 echo 'Building..'
-                g++-10 -o exe Hello.cpp
-                ./exe
+                sh 'g++-10 -o exe Hello.cpp'
+                sh './exe'
             }
         }
         stage('Clean') {

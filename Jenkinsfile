@@ -11,8 +11,8 @@
         }
         stage('Clean') {
             steps {
-                sh 'echo pwd'
-                echo 'ls'
+                sh 'echo $PWD'
+                sh 'ls'
             }
         }
     }

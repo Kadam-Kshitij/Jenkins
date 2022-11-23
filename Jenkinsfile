@@ -10,7 +10,9 @@
             }
         }
         stage('Clean') {
-            echo pwd
+            steps {
+                sh 'echo pwd'
+            }
         }
     }
 }

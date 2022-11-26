@@ -9,6 +9,11 @@
                 sh './exe'
             }
         }
+        stage('Deploy') {
+            steps {
+                sh 'cp ./exe /home/kshitij/JenkinsBuild'
+            }
+        }
         stage('Clean') {
             steps {
                 sh 'echo $PWD'

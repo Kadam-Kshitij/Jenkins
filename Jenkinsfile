@@ -18,6 +18,7 @@
     post { 
         cleanup('CleanUp') { 
             sh 'echo $PWD'
+            sh 'cd ..'
             sh 'sudo rm -rf ./*'
         }
     }

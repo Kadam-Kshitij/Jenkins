@@ -16,9 +16,9 @@
         }
     }
     post { 
-        cleanup { 
+        cleanup('CleanUp') { 
             sh 'echo $PWD'
-            sh 'ls'
+            sh 'sudo rm -rf ./*'
         }
     }
 }

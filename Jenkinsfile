@@ -11,7 +11,7 @@
         }
         stage('Deploy') {
             steps {
-                sh 'cp -r ./exe /home/kshitij/JenkinsBuild'
+                sh 'sudo cp -r ./exe /home/kshitij/JenkinsBuild'
             }
         }
     }

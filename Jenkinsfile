@@ -11,7 +11,7 @@
         }
         stage('Deploy') {
             steps {
-                sh 'cp ./exe /home/kshitij/JenkinsBuild'
+                sh 'cp -r ./exe /home/kshitij/JenkinsBuild'
             }
         }
     }

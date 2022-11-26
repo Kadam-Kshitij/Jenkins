@@ -17,7 +17,8 @@
     }
     post { 
         cleanup('CleanUp') { 
-            sh 'sudo rm -rf /var/lib/jenkins/workspace/*'
+            sh 'cd ..'
+            sh 'rm -rf ./*'
         }
     }
 }

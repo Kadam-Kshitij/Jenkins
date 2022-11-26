@@ -5,8 +5,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'ls'
+                sh 'echo $PWD'
                 sh 'df -h'
+                sh 'ls /home'
+                sh 'which gcc'
             }
         }
     }

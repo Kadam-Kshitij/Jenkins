@@ -14,11 +14,11 @@
                 sh 'cp ./exe /home/kshitij/JenkinsBuild'
             }
         }
-        stage('Clean') {
-            steps {
-                sh 'echo $PWD'
-                sh 'ls'
-            }
+    }
+    post { 
+        cleanup { 
+            sh 'echo $PWD'
+            sh 'ls'
         }
     }
 }

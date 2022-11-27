@@ -11,7 +11,7 @@ pipeline {
                 sh 'g++ -o exe Hello.cpp'
                 sh './exe'
                 sh 'mkdir -p /home/root/hello'
-                sh 'cp -r ./exe /home/hello'
+                sh 'cp -r ./exe /home/root/hello'
                 sh 'whoami'
             }
         }

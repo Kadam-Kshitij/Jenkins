@@ -5,10 +5,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo $PWD'
-                sh 'df -h'
-                sh 'ls /home'
-                sh 'which gcc'
+                sh 'gcc -o exe Hello.cpp'
+                sh './exe'
+                sh 'cp ./exe /home'
             }
         }
     }

@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'gcc -o exe Hello.cpp'
+                sh 'g++ -o exe Hello.cpp'
                 sh './exe'
                 sh 'mkdir hello'
                 sh 'cp -r ./exe /home/hello'

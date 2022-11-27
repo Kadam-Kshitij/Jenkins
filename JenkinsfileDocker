@@ -8,7 +8,7 @@ pipeline {
                 sh 'gcc -o exe Hello.cpp'
                 sh './exe'
                 sh 'mkdir hello'
-                sh 'cp ./exe /home/hello'
+                sh 'cp -r ./exe /home/hello'
             }
         }
     }

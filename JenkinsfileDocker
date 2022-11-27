@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker { 
             image 'ubuntu-app:latest'
-            args '-v /home/ubuntu/jenkinsBuild:/home/hello'
+            args '-v /home/ubuntu/jenkinsBuild:/home/root/hello --user root'
         }
     }
     stages {
@@ -10,9 +10,8 @@ pipeline {
             steps {
                 sh 'g++ -o exe Hello.cpp'
                 sh './exe'
-                sh 'mkdir -p /home/hello'
-                sh 'su root'
-                sh 'sudo cp -r ./exe /home/hello'
+                sh 'mkdir -p /home/root/hello'
+                sh 'cp -r ./exe /home/hello'
                 sh 'whoami'
             }
         }

@@ -7,7 +7,8 @@ pipeline {
             steps {
                 sh 'gcc -o exe Hello.cpp'
                 sh './exe'
-                sh 'cp ./exe /home'
+                sh 'mkdir hello'
+                sh 'cp ./exe /home/hello'
             }
         }
     }

@@ -7,8 +7,8 @@ pipeline {
             steps {
                 sh 'g++ -o exe Hello.cpp'
                 sh './exe'
-                sh 'mkdir -p /home/hello'
-                sh 'cp -r ./exe /home/hello'
+                sh 'sudo mkdir -p /home/hello'
+                sh 'sudo cp -r ./exe /home/hello'
             }
         }
     }

@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker { 
-            image 'ubuntu-cpp:latest'
+            image 'ubuntu-app:latest'
             args '-v /home/ubuntu/jenkinsBuild:/home/hello'
         }
     }

@@ -1,6 +1,9 @@
 pipeline {
     agent {
-        docker { image 'ubuntu-cpp:latest' }
+        docker { 
+            image 'ubuntu-cpp:latest'
+            args '-v /home/ubuntu/jenkinsBuild:/home/hello'
+        }
     }
     stages {
         stage('Build') {
